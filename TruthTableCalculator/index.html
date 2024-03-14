@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Table Generator</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Truth Table Generator</h1>
+        <form id="logic-form">
+            <input type="text" id="formula" placeholder="Enter formula here" required>
+            <button type="submit" class="btn-go">Generate</button>
+            <button type="button" class="btn-delete">Delete</button> 
+            <button type="button" onclick="toggleSymbolGuidance()" class="btn-help">Help</button>
+
+
+<div id="symbolGuidanceModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleSymbolGuidance()">&times;</span>
+    <p>Here is how you can enter the logic symbols:</p>
+    <ul>
+      <li>- Use '^' for AND (Conjunction)</li>
+      <li>- Use 'v' for OR (Disjunction)</li>
+      <li> - Use '~' for NOT (Negation)</li>
+      <li>- Use '->' for IMPLIES</li>
+      <li>- Use '<->' for BICONDITIONAL</li>
+      <li>- Use 'T' for TRUE</li>
+      <li>- Use 'F' for FALSE </li>
+    </ul>
+<p> Note: Make sure to use lowercase for the operators and uppercase for boolean constants.</p>
+  </div>
+</div>
+
+
+        </form>
+        <div id="resultDiv"></div> 
+        
+        <div id="truthTable"></div>
+    </div>
+    <div id="error"></div>
+
+    <script src="./scripts/domUtils.js"></script>
+    <script src="./scripts/tokenizer.js"></script>
+    <script src="./scripts/toRPN.js"></script>
+    <script src="./scripts/evaluateRPN.js"></script>
+    <script src="./scripts/truthTableGenerator.js"></script>
+    <script src="./scripts/display.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
