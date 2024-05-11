@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-gap: 10px; 
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; 
+    height: 60px; 
+    
+    border: 2px dashed #ccc; 
+    border-radius: 10px; 
+    margin: 5px; 
+  }
+  
+  
+  .shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shape > svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  button, input[type="radio"] {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  
+  #statement-text {
+    margin: 20px 0;
+  }
+  
+  #result {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #d00;
+  }
+  
+  /* Adjustments for the True/False options layout */
+  .options-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 600px) {
+    .cell {
+      width: 15vw; 
+      height: 15vw; 
+    }
+  }
+  
